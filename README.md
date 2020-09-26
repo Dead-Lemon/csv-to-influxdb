@@ -1,41 +1,18 @@
 # csv-to-influxdb Extended
-Library is being modified to watch a folder for FTP uploaded CSV files.
-
-hashDir returns a list of change files between runs
-folderWatch monitors a set folder and will call hashDir when a change is detected
+Library is being modified to uploaded CSV files from IOT device.
 csvToInfluxdb is configured by the csv.json file. Column names can me renamed
-
-## hashDir Usage
-
-```
-usage: hashDir.py -i [INPUT] -s [STORE]
-
-  -i [INPUT], --input [INPUT]
-                        Path to folder to check
-  -s [STORE], --store [STORE]
-                        Store name for dirtory hashes
-                        Default = .oldhash
-
-returns [HASH, FULL PATH OF FILE, FILE NAME]
-
-```
-
 
 ## csvToInfluxdb Usage
 
 ```
-usage: hashDir.py -i [INPUT] -c [CONFIG]
+usage: csvToInfluxdb.py -i [INPUT] -c [CONFIG]
 
   -i [INPUT], --input [INPUT]
-                        Path to csv file
-  
+                        Path to csv file 
   optional
-
   -c [CONFIG], --config [CONFIG]
                         path to config file
                         Default = csv.json
-
-returns [HASH, FULL PATH OF FILE, FILE NAME]
 
 ```
 
